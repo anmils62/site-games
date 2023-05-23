@@ -1,0 +1,67 @@
+.cards {
+    padding: 15rem 0;
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem 6rem;
+
+    @include respond(tab-port) {
+        padding: 11rem 0;
+    }
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4.5rem;
+    background-color: $color-blue-dark;
+
+    &__img {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2 ;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2rem;
+        text-align: center;
+        color: $color-gray-light;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: end;
+        padding: 1.5rem 7rem;
+        z-index: 2;
+        transform: translateY(50%);
+        background-color: $color-green-dark;
+    }
+
+    &__svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2rem;
+        color: $color-gray-light;
+    }
+
+    &__btn  {
+        grid-column: 1 / -1;
+    }
+}
+
+.content {
+    display: flex;
+    margin-left: 2.5rem;
+
+}

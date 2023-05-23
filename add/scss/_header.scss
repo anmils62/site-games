@@ -1,0 +1,72 @@
+.header {
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr;
+    grid-column: full-start / col-end 6;
+    padding: 5rem;
+    background: url(/src/img/header/background-header.png) center / cover no-repeat;
+
+    @include respond(tab-port) {
+        grid-column: full-start / full-end;
+    }
+    
+    &__heading {
+        font-size: 1.9rem;
+    }
+
+    &__heading-1 {
+        margin-bottom: 1rem;
+        
+        @include respond(650) {
+            margin-bottom: 5rem;
+        }
+    }
+
+
+    &__line {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 2rem;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2rem;  
+        color: $color-gray-dark;
+        margin-bottom: 1.5rem;
+
+    }
+
+    &__partners {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+
+    &__partners-logo {
+        height: 2.5rem;
+    }
+
+    &__button {
+        align-self: start;
+        justify-self: start;
+    }
+
+}
+
+.header__line::before,
+.header__line::after {
+    content: "";
+    display: block;
+    height: .1rem;
+    background-color: $color-gray-dark;
+}
+
+.logo {
+    display: block;
+
+    &-svg {
+        display: block;
+        width: 12rem;
+        height: 4.1rem;
+        margin: 0 auto;
+    }
+}

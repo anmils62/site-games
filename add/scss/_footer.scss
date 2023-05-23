@@ -1,0 +1,32 @@
+.footer {
+    display: grid;
+    grid-column: full-start / full-end;
+    padding: 8rem 3rem;
+    border-top: solid .3rem $color-gray-light;
+    background-color: $color-blue-dark;
+
+    &__logo {
+        margin-bottom: 8rem;
+    }
+
+    &__nav-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        justify-items: center;
+        grid-gap: 3rem;
+        text-align: center;
+    }
+
+    &__nav-link {
+        display: inline-block;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-gray-light;
+        transition: .3s easy;
+
+        &:hover {
+            color: $color-gray-dark;
+            transform: translateY(-.2rem);
+        }
+    }
+}

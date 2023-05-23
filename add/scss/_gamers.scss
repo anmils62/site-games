@@ -1,0 +1,62 @@
+
+.gamers {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 4rem 2rem;
+    grid-column: col-start 7 / full-end;
+    align-content: center;
+    justify-content: center;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: $color-blue-dark;
+
+    @include respond(tab-port) {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        justify-items: center;
+        padding: 5rem 0;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: min-content;
+        justify-items: start;
+    }
+
+    &__players {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-column-gap: 1.5rem;
+    }
+
+    &__title, &__name {
+        font-size: 1.9rem;
+        font-weight: 700;
+        line-height: 2.3rem;
+        text-transform: none;
+        color: $color-gray-light;
+    } 
+
+    &__title {
+        grid-column: 1 / -1;
+        justify-self: center;
+        padding-top: 3rem;
+        text-transform: uppercase;
+        color: $color-green-light;
+    }
+
+    &__score {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2rem;
+        color: $color-gray-dark;
+    }
+
+    &__about-player {
+        align-self: center;
+    }
+
+    &__photo {
+        max-width: 7rem;
+    
+    }
+
+}

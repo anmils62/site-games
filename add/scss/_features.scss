@@ -1,0 +1,38 @@
+.features {
+    grid-column: center-start / center-end;
+    align-items: start;
+    background-color: $color-gray-light;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr)); 
+        padding: 15rem 0;
+        grid-gap: 3rem 4rem; // отступы между строками и колонками
+
+        @include respond(phone) {
+            padding: 6rem 0;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: 6rem 1fr;
+        grid-gap: 1.5rem 2rem;
+    }
+
+    &__heading {
+        align-self: center;
+    }
+    
+    &__description {
+        color: $color-green-dark;
+        grid-column: 2 / 2;
+    }
+
+    &__icon {
+        width: 4.5rem;
+        transform: translateY(-4.5rem);
+    }
+
+}
